@@ -1,0 +1,92 @@
+import java.util.Scanner;
+public class Main
+{
+    
+    public static void main(String[] args) {
+        int limba;
+        int optiune;
+        int varianta;
+        int suma;
+        boolean x=false;
+         Scanner scan=new Scanner(System.in);
+        
+        System.out.println("Bancomat");
+        System.out.println("Introduceti ce limba doriti:");
+        
+        while(x != true)
+        {
+        System.out.println("1. Romana");
+        System.out.println("2. English");
+        System.out.println("3. French");
+        limba=scan.nextInt();     
+        
+        if(limba == 1){
+            System.out.println("Ce doriti in continuare?");
+            break;       
+        }
+        
+        if (limba == 2 || limba == 3){
+            System.out.println("Ne pare rau, la momentul actual doar romana puteti folosi. Ce doriti in continuare?");
+            break;
+        }
+        
+        else {
+            System.out.println("Va rugam sa apasati tastele de la 1 la 3");
+        }
+        }
+        
+        System.out.println("1. Interogare sold");
+        System.out.println("2. Retragere numerar");
+        System.out.println("3. Iesire");
+        
+        varianta=scan.nextInt();
+        switch(varianta){
+            case 1:
+            
+            System.out.println("Soldul disponibil este de 2332 lei! Doriti sa ii retrageti?");
+            System.out.println("1.Da");
+            System.out.println("2.Nu");
+            
+            optiune=scan.nextInt();
+            if (optiune == 1){
+                System.out.println("Ce suma doriti sa retrageti?");
+                
+                suma=scan.nextInt();
+                if(suma<=2332){
+                    System.out.println("Ati retras " +suma+ " lei. Va multumim!");
+                }
+                else
+                {
+                    System.out.println("Soldul este de 2332 lei, va rugam sa nu il depasiti!");
+                }
+        break;
+            }
+         
+            if(optiune == 2)
+            {
+                System.out.println("Va multumim, o zi buna in continuare!");
+                break;
+            }
+        
+            else{System.out.println("Va multumim, o zi buna in continuare!");
+	    }
+            break;
+            
+            case 2:
+            
+            System.out.println("Ce suma doriti sa retrageti?");
+                suma=scan.nextInt();
+                if(suma<=2332){
+                    System.out.println("Ati retras " +suma+ " lei. Va multumim!");
+                }
+                else
+                {
+                    System.out.println("Soldul este de 2332 lei, va rugam sa nu il depasiti!");
+                }
+                break;
+                
+            default:
+            System.out.println("Va multumim, o zi buna in continuare!");
+        } 
+        }
+ }
